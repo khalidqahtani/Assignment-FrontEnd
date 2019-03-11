@@ -3,14 +3,29 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import {HttpClientModule} from '@angular/common/http';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { ActivestudentComponent } from './activestudent/activestudent.component';
+import { UnactivestudentComponent } from './unactivestudent/unactivestudent.component';
+import { AddstudentComponent } from './addstudent/addstudent.component';
+import { UpdateComponent } from './update/update.component';
+import { NavComponent } from './nav/nav.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ActivestudentComponent,
+    UnactivestudentComponent,
+    AddstudentComponent,
+    UpdateComponent,
+    NavComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    HttpClientModule,
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

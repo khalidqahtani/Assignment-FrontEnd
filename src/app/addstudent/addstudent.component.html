@@ -1,0 +1,48 @@
+
+<div style="background-color: white">
+  <H1 style="color: black; text-align: center">Add student</H1>
+  <div class="rounded" style="background-color: white; margin: 20px; padding: 20px">
+    <form novalidate [formGroup]="myReactiveForm">
+
+
+      <div class="form-group">
+        <label>Name</label>
+        <input type="text" class="form-control" id="name"
+               placeholder="Enter Name"
+               formControlName="name">
+        <div *ngIf="myReactiveForm.controls.name.valid&&myReactiveForm.controls.name.dirty" style="color: green">
+          Success!
+        </div>
+      </div>
+
+
+      <div class="form-group">
+        <label>Age</label>
+        <input type="number" class="form-control" id="age"
+               placeholder="Enter Your Age"
+               formControlName="age">
+        <div *ngIf="myReactiveForm.controls.age.valid&&myReactiveForm.controls.age.dirty" style="color: green">
+          Success!
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>GPA</label>
+        <input type="text" class="form-control" id="gpa"
+               placeholder="Ex 5.00 "
+               formControlName="gpa">
+        <div *ngIf="myReactiveForm.controls.gpa.invalid&&myReactiveForm.controls.gpa.dirty" style="color: red">
+          GPA must be out of 5.00
+        </div>
+
+        <div *ngIf="myReactiveForm.controls.gpa.valid&&myReactiveForm.controls.gpa.dirty" style="color: green">
+          Success!
+        </div>
+      </div>
+
+      <button type="submit" class="btn btn-primary" style="margin-left: 40%; width: 20%"
+              (click)="onSubmit()"
+              [disabled]="!myReactiveForm.valid">Submit</button>
+    </form>
+  </div>
+</div>

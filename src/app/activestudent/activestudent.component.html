@@ -1,0 +1,48 @@
+
+<body class="hm-gradient">
+
+<main>
+
+  <div class="row" >
+    <div class="container mt-4">
+
+
+
+      <div class="card mb-3 offset-sm-0">
+        <div class="card-body">
+          <table class="table table-hover">
+            <thead class="mdb-color">
+            <tr class="text-white" style="background-color: #241F61">
+              <th>#</th>
+              <th>Name</th>
+              <th>Age</th>
+              <th>GPA</th>
+              <th>Update</th>
+              <th>Delete</th>
+
+            </tr>
+            </thead>
+            <tbody *ngFor="let s of student$ ">
+            <tr >
+              <td>{{s.sid}}</td>
+              <td>{{s.name}}</td>
+              <td>{{s.age}}</td>
+              <td>{{s.gpa}}</td>
+              <td><button  type="button" class="btn btn-dark btn-sm" [routerLink]="['/update', s.sid]">Update</button></td>
+              <td> <button type="button" class="btn btn-danger btn-sm"  (click)="deleteStudent(s.sid)">Delete</button></td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+
+
+    </div>
+
+  </div>
+</main>
+
+</body>
+
+
