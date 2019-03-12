@@ -8,7 +8,6 @@ import {UpdateComponent} from './update/update.component';
 
 
 const routes: Routes = [
-  {path: '', component: AppComponent},
   {path: 'allstudent', component: ActivestudentComponent},
   {path: 'unactivestudent', component: UnactivestudentComponent},
   {path: 'add', component: AddstudentComponent},
