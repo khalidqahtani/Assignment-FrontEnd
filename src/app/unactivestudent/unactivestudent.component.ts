@@ -9,6 +9,7 @@ import {StudentService} from '../student.service';
 })
 export class UnactivestudentComponent implements OnInit {
   student$: Student[];
+  p = 1;
 
   constructor(private student: StudentService) { }
 

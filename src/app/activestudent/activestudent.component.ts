@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Student} from '../student.model';
 import {StudentService} from '../student.service';
-import {Router} from '@angular/router';
+
 
 @Component({
   selector: 'app-activestudent',
@@ -10,13 +10,15 @@ import {Router} from '@angular/router';
 })
 export class ActivestudentComponent implements OnInit {
   student$: Student[];
+  p = 1;
 
-  constructor(private student: StudentService
-              ) { }
+
+  constructor(private student: StudentService) { }
 
   ngOnInit() {
     this.studentActive();
   }
+
   studentActive() {
     this.student.studentActive().subscribe(studentActive => {
         this.student$ = studentActive;
@@ -24,9 +26,9 @@ export class ActivestudentComponent implements OnInit {
       err => console.log(err),
     );
   }
-
   deleteStudent(sid: number) {
     this.student.deleteStudent(sid).subscribe(del => this.ngOnInit(),
     );
   }
+
 }

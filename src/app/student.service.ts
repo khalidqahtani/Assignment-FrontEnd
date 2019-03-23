@@ -21,7 +21,6 @@ export class StudentService {
   studentUnActive(): Observable<Student[]> {
     return this.http.get<Student[]>(`api/allstudentDeleted`);
   }
-
   update(a, sid: number): Observable<Student> {
     return this.http.put<Student>(`api/update/` + `${sid}`, JSON.stringify(a.value), API_ARGS);
   }

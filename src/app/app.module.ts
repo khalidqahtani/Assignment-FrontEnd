@@ -10,6 +10,8 @@ import { UnactivestudentComponent } from './unactivestudent/unactivestudent.comp
 import { AddstudentComponent } from './addstudent/addstudent.component';
 import { UpdateComponent } from './update/update.component';
 import { NavComponent } from './nav/nav.component';
+import {NgxPaginationModule} from 'ngx-pagination';
+
 
 @NgModule({
   declarations: [
@@ -25,7 +27,9 @@ import { NavComponent } from './nav/nav.component';
     HttpClientModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgxPaginationModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

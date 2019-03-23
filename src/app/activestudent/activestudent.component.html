@@ -22,7 +22,7 @@
 
             </tr>
             </thead>
-            <tbody *ngFor="let s of student$ ">
+            <tbody *ngFor="let s of student$| paginate: { itemsPerPage: 3, currentPage: p } ">
             <tr >
               <td>{{s.sid}}</td>
               <td>{{s.name}}</td>
@@ -33,6 +33,9 @@
             </tr>
             </tbody>
           </table>
+          <hr>
+
+          <pagination-controls style="text-align: center" (pageChange)="p = $event"></pagination-controls>
         </div>
 
       </div>
