@@ -11,6 +11,7 @@ import { AddstudentComponent } from './addstudent/addstudent.component';
 import { UpdateComponent } from './update/update.component';
 import { NavComponent } from './nav/nav.component';
 import {NgxPaginationModule} from 'ngx-pagination';
+import {NgxPrintModule} from 'ngx-print';
 
 
 @NgModule({
@@ -28,7 +29,8 @@ import {NgxPaginationModule} from 'ngx-pagination';
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    NgxPaginationModule
+    NgxPaginationModule,
+    NgxPrintModule
 
   ],
   providers: [],
